@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Es01</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
+    <!--Css-->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="navbar">
+        <a class="navbar-brand" href="#">Es01</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+                <span class="text-light">Signed in as:</span><a class="nav-link text-light font-weight-bold" href="#">{{login_username}}</a>
+                <button class="btn btn-outline-light my-2 my-sm-0" v-on:click="Logout">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Automobili e motocicli</h1>
+            <p class="lead">Brero Riccardo. Esercitio di TPSI per i compiti delle vacanze, vendita di automobili e motocicli.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row no-gutters" id="searchbar">
+            <div class="col">
+                <search-widget></search-widget>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5" id="cardscontainer">
+        <h2 v-if="rows.length < 1">Nessun veicolo trovato</h2>
+        <div class="row mt-3" v-for="col in rows">
+            <div class="col-sm-3" v-for="card in col">
+                <card-widget v-bind:title="card.titolo" v-bind:desc="card.desc" v-bind:itemid="card.id"></card-widget>
+            </div>
+        </div>
+
+        <!-- Card modal -->
+        <div class="modal fade" id="cardModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">{{modalTitle}}</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <h3 v-if="modalData.length < 1">Caricamento ...</h3>
+                    <p v-for="item in modalData" :key="item.id">{{item}}</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary mt-5">
+        <div class="text-light text-center py-3">&copy; 2018 Copyright: <a class="text-light font-weight-bold" href="#"> Riccardo Brero</a></div>
+    </footer>
+
+    <!--Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+
+    <!--Js-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
