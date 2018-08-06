@@ -24,13 +24,18 @@ var Adb_MySQL = {
             xmlhttp.send();
         }
     },
+    Settings: {
+        printErrors: true, idStringDb: "ID"
+    },
     Errors: {
         Last: "",
         All: [],
         Add: function(message)
         {
             this.Last = message;
-            All.push(message);
+            this.All.push(message);
+
+            if (Adb_MySQL.Settings.printErrors) { console.error("AwesomeDB Error message: \n" + message); }
         }
     },
 
@@ -54,6 +59,7 @@ var Adb_MySQL = {
         let ret = -1;
 
         this.Methods.ajaxCall(`AwesomeDB_MySQL.php?f_Qu=true` +
+            `&p_settings=${JSON.stringify(this.Settings)}` +
             `&p_host=${this.Data.host}` +
             `&p_user=${this.Data.user}` +
             `&p_password=${this.Data.password}` +
@@ -61,7 +67,8 @@ var Adb_MySQL = {
             `&p_qstring=${qstring}`
         , (response) =>
         {
-            ret = JSON.parse(response);
+            try { ret = JSON.parse(response); }
+            catch { ret = -1; this.Errors.Add(response); }
             f_response(ret);
         });
 
@@ -75,6 +82,30 @@ var Adb_MySQL = {
     ///(il parametro "ret" della funzzione di risposta contiene il risultato di ogni eliminazione).
     Rem: function(table, idArray, f_response)
     {
+        let ret = [];
+
+        idArray.forEach((id, index) =>
+        {
+            ret.push(-1);
+
+            this.Methods.ajaxCall(`AwesomeDB_MySQL.php?f_Rem=true` +
+                `&p_settings=${JSON.stringify(this.Settings)}` +
+                `&p_host=${this.Data.host}` +
+                `&p_user=${this.Data.user}` +
+                `&p_password=${this.Data.password}` +
+                `&p_dbname=${this.Data.dbname}` +
+                `&p_table=${table}` +
+                `&p_id=${id}`
+            , (response) =>
+            {
+                try { ret[index] = JSON.parse(response); }
+                catch { ret[index] = -1; this.Errors.Add(response); }
+
+                if (index === idArray.length - 1)
+                    f_response(ret);
+            });
+        });
+
         return this;
     },
 
@@ -88,6 +119,7 @@ var Adb_MySQL = {
         let newValues = Object.values(recordObj);
 
         this.Methods.ajaxCall(`AwesomeDB_MySQL.php?f_Upd=true` +
+            `&p_settings=${JSON.stringify(this.Settings)}` +
             `&p_host=${this.Data.host}` +
             `&p_user=${this.Data.user}` +
             `&p_password=${this.Data.password}` +
@@ -98,7 +130,8 @@ var Adb_MySQL = {
             `&p_newValues=${JSON.stringify(newValues)}`
         , (response) =>
         {
-            ret = JSON.parse(response);
+            try { ret = JSON.parse(response); }
+            catch { ret = -1; this.Errors.Add(response); }
             f_response(ret);
         });
 
@@ -120,6 +153,7 @@ var Adb_MySQL = {
             let newValues = Object.values(recordObj);
 
             this.Methods.ajaxCall(`AwesomeDB_MySQL.php?f_Ins=true` +
+                `&p_settings=${JSON.stringify(this.Settings)}` +
                 `&p_host=${this.Data.host}` +
                 `&p_user=${this.Data.user}` +
                 `&p_password=${this.Data.password}` +
@@ -129,7 +163,8 @@ var Adb_MySQL = {
                 `&p_newValues=${JSON.stringify(newValues)}`
             , (response) =>
             {
-                ret[index] = JSON.parse(response);
+                try { ret[index] = JSON.parse(response); }
+                catch { ret[index] = -1; this.Errors.Add(response); }
 
                 if (index === recordArrayObj.length - 1)
                     f_response(ret);
@@ -146,6 +181,7 @@ var Adb_MySQL = {
         let ret = -1;
 
         this.Methods.ajaxCall(`AwesomeDB_MySQL.php?f_All=true` +
+            `&p_settings=${JSON.stringify(this.Settings)}` +
             `&p_host=${this.Data.host}` +
             `&p_user=${this.Data.user}` +
             `&p_password=${this.Data.password}` +
@@ -153,7 +189,8 @@ var Adb_MySQL = {
             `&p_table=${table}`
         , (response) =>
         {
-            ret = JSON.parse(response);
+            try { ret = JSON.parse(response); }
+            catch { ret = -1; this.Errors.Add(response); }
             f_response(ret);
         });
 

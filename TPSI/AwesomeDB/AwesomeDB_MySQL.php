@@ -18,19 +18,21 @@ foreach ($Functins as $key=>$functin)
             case 4: echo f_All(); break;
         }
 
-//Global data
+// !!--Global data--!!
 $GLOBALS['host'] = "";
 $GLOBALS['user'] = "";
 $GLOBALS['password'] = "";
 $GLOBALS['dbname'] = "";
+$GLOBALS['settings'] = "";
 
-//Functions
+// !!--Functions--!!
 function f_Qu()
 {
-    GetDbData();
+    GetGlobalData();
     $qstring = get_request("p_qstring");
     $db = db_connect($GLOBALS['host'], $GLOBALS['user'], $GLOBALS['password'], $GLOBALS['dbname']);
     $qredult = db_Query($db, $qstring);
+    $db->close();
     $return = array();
 
     if ($qredult)
@@ -40,21 +42,48 @@ function f_Qu()
 }
 function f_Rem()
 {
-    
+    GetGlobalData();
+    $table = get_request("p_table");
+    $id = get_request("p_id");
+    $settings = json_decode($GLOBALS['settings']);
+
+    $db = db_connect($GLOBALS['host'], $GLOBALS['user'], $GLOBALS['password'], $GLOBALS['dbname']);
+    $qredult = db_remove($db, $settings->idStringDb, $table, $id);
+    $db->close();
+    $return = array();
+
+    if ($qredult)
+            $return[] = $qredult;
+    return json_encode($return);
 }
 function f_Upd()
 {
-    
+    GetGlobalData();
+    $table = get_request("p_table");
+    $id = get_request("p_id");
+    $recordNames = json_decode(get_request("p_recordNames"));
+    $newValues = json_decode(get_request("p_newValues"));
+    $settings = json_decode($GLOBALS['settings']);
+
+    $db = db_connect($GLOBALS['host'], $GLOBALS['user'], $GLOBALS['password'], $GLOBALS['dbname']);
+    $qredult = db_update($db, $settings->idStringDb, $table, $id, $recordNames, $newValues);
+    $db->close();
+    $return = array();
+
+    if ($qredult)
+            $return[] = $qredult;
+    return json_encode($return);
 }
 function f_Ins()
 {
-    GetDbData();
+    GetGlobalData();
     $table = get_request("p_table");
     $recordNames = json_decode(get_request("p_recordNames"));
     $newValues = json_decode(get_request("p_newValues"));
 
     $db = db_connect($GLOBALS['host'], $GLOBALS['user'], $GLOBALS['password'], $GLOBALS['dbname']);
     $qredult = db_insert($db, $table, $recordNames, $newValues);
+    $db->close();
     $return = array();
 
     if ($qredult)
@@ -63,10 +92,11 @@ function f_Ins()
 }
 function f_All()
 {
-    GetDbData();
+    GetGlobalData();
     $table = get_request("p_table");
     $db = db_connect($GLOBALS['host'], $GLOBALS['user'], $GLOBALS['password'], $GLOBALS['dbname']);
     $qredult = db_Query($db, "SELECT * FROM $table");
+    $db->close();
     $return = array();
 
     if ($qredult)
@@ -75,13 +105,14 @@ function f_All()
     return json_encode($return);
 }
 
-//Global methods
-function GetDbData()
+// !!--Global methods--!!
+function GetGlobalData()
 {
     $GLOBALS['host'] = get_request("p_host");
     $GLOBALS['user'] = get_request("p_user");
     $GLOBALS['password'] = get_request("p_password");
     $GLOBALS['dbname'] = get_request("p_dbname");
+    $GLOBALS['settings'] = get_request("p_settings");
 }
 function get_request($data)
 {
@@ -104,15 +135,15 @@ function db_Query($database, $query)
 {
     return $result = $database->query("$query");
 }
-function db_remove($database, $table, $id)
+function db_remove($database, $idStringDb, $table, $id)
 {
-    $result = $database->query("DELETE FROM $table WHERE id=$id");
+    $result = $database->query("DELETE FROM $table WHERE $idStringDb=$id");
     if ($result)
         return $result;
     else
         die("ERRORE: Remove non risuscito");
 }
-function db_update($database, $table, $id, $recordNames, $newValues)
+function db_update($database, $idStringDb, $table, $id, $recordNames, $newValues)
 {
     $sqlQuery = "UPDATE $table SET ";
     foreach ($recordNames as $i => $recordName)
@@ -121,7 +152,7 @@ function db_update($database, $table, $id, $recordNames, $newValues)
             $sqlQuery .= ", ";
         $sqlQuery .= "$recordName='$newValues[$i]' ";
     }
-    $sqlQuery .= "WHERE id=$id";
+    $sqlQuery .= "WHERE $idStringDb=$id";
 
     $result = $database->query($sqlQuery);
     if ($result)

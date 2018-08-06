@@ -49,7 +49,43 @@
                 console.log(qdata);
             });
         });*/
+/*
+        adb.Upd("utenti", 43, {
+            Nome: "rrr",
+            Cognome: "rr",
+            Cellulare: "rrr",
+        }, (res) => {
+            console.log(res);
+            adb.Qu("SELECT * FROM utenti", (qdata) => {
+                console.log("Utenti: ");
+                console.log(qdata);
+            });
+        });*/
 
+
+        //Esecuzione di fatto sincrona
+        adb.Rem("utenti", [35, 36, 37, 38, 39], (res) =>
+        {
+            console.log("remove!!");
+            console.log(res);
+
+            adb.Qu("SELECT * FROM utenti", (qdata) =>
+            {
+                console.log("Utenti: ");
+                //console.log(qdata);
+                console.table(qdata);
+
+                adb.Upd("cccc", 37, {
+                    Nome: "rrr",
+                    Cognome: "rr",
+                    Cellulare: "rrr",
+                }, (res) =>
+                {
+                    console.log("update result: ");
+                    console.log(res);
+                });
+            });
+        });
 
     </script>
 </body>
