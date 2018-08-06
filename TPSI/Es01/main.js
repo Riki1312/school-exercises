@@ -81,6 +81,14 @@ window.onload = function()
     NavBar.login_username = sessionStorage.getItem('nome') + " " + sessionStorage.getItem('cognome');
   else { window.location.href = "singin.html"; }
 
+  AJAXCall("php/main.php?veicoloid=null", (response) => {
+    if (!response.includes("ERROR"))
+    {
+      console.log(JSON.parse(response));
+    }
+    else { console.log(response); }
+  });
+
   CardsContainer.rows.push([{id: 1, titolo: "1", desc: "descrizione"}, {id: 2, titolo: "2", desc: "descrizione"}, {id: 3, titolo: "3", desc: "descrizione"}, {id: 4, titolo: "4", desc: "descrizione"}]);
   CardsContainer.rows.push([{id: 5, titolo: "11", desc: "pushiato"}, {id: 6, titolo: "22", desc: "pushiato"}]);
 };
@@ -100,4 +108,17 @@ function BeforeModalOpen(cardid)
   alert('Opening modal cardid: ' + cardid);
   CardsContainer.modalData = [];
   CardsContainer.modalData.push("Nome: ciao", "Cognome: hello");
+}
+
+//AJAX
+function AJAXCall(url, functionResponse, method = "GET", async = true)
+{
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            functionResponse(this.responseText);
+        }
+    };
+    xmlhttp.open(method, url, async);
+    xmlhttp.send();
 }

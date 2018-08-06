@@ -3,6 +3,8 @@
 function db_connect($host, $user, $password, $dbname)
 {
     $db = new mysqli($host, $user, $password, $dbname);
+    $db->set_charset("utf8");   //json_encode(...) Funziona solo con utf8.
+
     if ($db -> connect_error)
         die("ERRORE: Connessione al database non riuscita:" . $db->connect_errno ." - " . $db->connect_error);
     else

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Test AwesomeDB</title>
+
+    <script src="AwesomeDB.js"></script>
+</head>
+<body>
+    <script>
+        var adb = Object.create(Adb_MySQL);
+
+        adb.Conn("localhost", "root", "", "compitivacanzees1");
+
+        adb.Qu("SELECT * FROM utenti",(qdata) => {
+            console.log(qdata);
+        });
+        adb.Qu("SELECT Nome FROM utenti",(qdata) => {
+            console.log(qdata);
+        });
+        adb.Qu("SELECT * FROM veicoli WHERE ID = 1",(qdata) => {
+            console.log(qdata);
+        });
+
+        //Non funziona ancora
+        /*
+        adb.All("veicoli",(qdata) => {
+            console.log(qdata);
+        });*/
+
+
+    </script>
+</body>
