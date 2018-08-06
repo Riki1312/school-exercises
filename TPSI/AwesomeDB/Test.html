@@ -8,24 +8,46 @@
 </head>
 <body>
     <script>
-        var adb = Object.create(Adb_MySQL);
+        var adb = new AwesomeDB().MySQL;
 
         adb.Conn("localhost", "root", "", "compitivacanzees1");
 
-        adb.Qu("SELECT * FROM utenti",(qdata) => {
+        adb.Qu("SELECT * FROM utenti", (qdata) => {
             console.log(qdata);
-        });
-        adb.Qu("SELECT Nome FROM utenti",(qdata) => {
+        }).Qu("SELECT Nome FROM utenti", (qdata) => {
             console.log(qdata);
-        });
-        adb.Qu("SELECT * FROM veicoli WHERE ID = 1",(qdata) => {
+        }).Qu("SELECT * FROM veicoli WHERE ID = 1", (qdata) => {
             console.log(qdata);
         });
 
-        //Non funziona ancora
-        /*
-        adb.All("veicoli",(qdata) => {
+        adb.All("veicoli", (qdata) => {
             console.log(qdata);
+        });
+
+        adb.Qu("SELECT * FROM ciao", (res) => {
+            console.log(res);
+            console.log(res.length);
+        });
+/*
+
+        adb.Ins("utenti", [{
+            Nome: "a",
+            Cognome: "b",
+            Email: "c",
+            Password: "d",
+            Cellulare: "012345"
+        },{
+            Nome: "e",
+            Cognome: "f",
+            Email: "g",
+            Password: "h",
+            Cellulare: "67890"
+        }], (res) => {
+            console.log(res);
+            adb.Qu("SELECT * FROM utenti", (qdata) => {
+                console.log("qdata: ");
+                console.log(qdata);
+            });
         });*/
 
 

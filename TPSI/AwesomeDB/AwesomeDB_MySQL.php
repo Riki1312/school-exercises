@@ -7,9 +7,16 @@ $Functins = array(
     "f_Ins",
     "f_All"
 );
-foreach ($Functins as $functin)
+foreach ($Functins as $key=>$functin)
     if (isset($_REQUEST["$functin"]))
-        echo f_Qu();
+        switch ($key)
+        {
+            case 0: echo f_Qu(); break;
+            case 1: echo f_Rem(); break;
+            case 2: echo f_Upd(); break;
+            case 3: echo f_Ins(); break;
+            case 4: echo f_All(); break;
+        }
 
 //Global data
 $GLOBALS['host'] = "";
@@ -26,8 +33,9 @@ function f_Qu()
     $qredult = db_Query($db, $qstring);
     $return = array();
 
-    while ($row = $qredult->fetch_assoc())
-        $return[] = $row;
+    if ($qredult)
+        while ($row = $qredult->fetch_assoc())
+            $return[] = $row;
     return json_encode($return);
 }
 function f_Rem()
@@ -40,18 +48,30 @@ function f_Upd()
 }
 function f_Ins()
 {
-    
+    GetDbData();
+    $table = get_request("p_table");
+    $recordNames = json_decode(get_request("p_recordNames"));
+    $newValues = json_decode(get_request("p_newValues"));
+
+    $db = db_connect($GLOBALS['host'], $GLOBALS['user'], $GLOBALS['password'], $GLOBALS['dbname']);
+    $qredult = db_insert($db, $table, $recordNames, $newValues);
+    $return = array();
+
+    if ($qredult)
+            $return[] = $qredult;
+    return json_encode($return);
 }
 function f_All()
 {
     GetDbData();
     $table = get_request("p_table");
     $db = db_connect($GLOBALS['host'], $GLOBALS['user'], $GLOBALS['password'], $GLOBALS['dbname']);
-    $qredult = db_Query($db, "SELECT * FROM " + $table);
+    $qredult = db_Query($db, "SELECT * FROM $table");
     $return = array();
 
-    while ($row = $qredult->fetch_assoc())
-        $return[] = $row;
+    if ($qredult)
+        while ($row = $qredult->fetch_assoc())
+            $return[] = $row;
     return json_encode($return);
 }
 
@@ -82,7 +102,7 @@ function db_connect($host, $user, $password, $dbname)
 }
 function db_Query($database, $query)
 {
-    return $result = $database->query($query);
+    return $result = $database->query("$query");
 }
 function db_remove($database, $table, $id)
 {
