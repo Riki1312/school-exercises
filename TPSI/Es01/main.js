@@ -77,20 +77,24 @@ window.onload = function()
 {
   console.log("Loadpage");
 
-  if (sessionStorage.getItem('logged') == 'true')
+  if (sessionStorage.getItem('logged') === 'true')
     NavBar.login_username = sessionStorage.getItem('nome') + " " + sessionStorage.getItem('cognome');
   else { window.location.href = "singin.html"; }
 
   AJAXCall("php/main.php?veicoloid=null", (response) => {
     if (!response.includes("ERROR"))
     {
-      console.log(JSON.parse(response));
+        var data = JSON.parse(response);
+
+        console.log(data);
+
+        var rows = data.map((x) => { return {id: x.ID, titolo: "11", desc: x.Descrizione}; });
+        for (var i = 0; i < rows.length; i += 4) { CardsContainer.rows.push(rows.splice(i, i + 4)); }
+
+        CardsContainer.rows.push([{id: 5, titolo: "11", desc: "pushiato"}, {id: 6, titolo: "22", desc: "pushiato"}]);
     }
     else { console.log(response); }
   });
-
-  CardsContainer.rows.push([{id: 1, titolo: "1", desc: "descrizione"}, {id: 2, titolo: "2", desc: "descrizione"}, {id: 3, titolo: "3", desc: "descrizione"}, {id: 4, titolo: "4", desc: "descrizione"}]);
-  CardsContainer.rows.push([{id: 5, titolo: "11", desc: "pushiato"}, {id: 6, titolo: "22", desc: "pushiato"}]);
 };
 function Serch(text, filter)
 {
