@@ -85,13 +85,11 @@ window.onload = function()
     if (!response.includes("ERROR"))
     {
         var data = JSON.parse(response);
-
         console.log(data);
 
-        var rows = data.map((x) => { return {id: x.ID, titolo: "11", desc: x.Descrizione}; });
+        var rows = data.map((x) => { return {id: x.ID, titolo: `${x.Marca} ${x.Modello}`, desc: x.Descrizione}; });
         for (var i = 0; i < rows.length; i += 4) { CardsContainer.rows.push(rows.splice(i, i + 4)); }
-
-        CardsContainer.rows.push([{id: 5, titolo: "11", desc: "pushiato"}, {id: 6, titolo: "22", desc: "pushiato"}]);
+        if (rows.length % 4 !== 0) { CardsContainer.rows.push(rows.splice(rows.length - rows.length % 4, rows.length)); }
     }
     else { console.log(response); }
   });
@@ -100,6 +98,8 @@ function Serch(text, filter)
 {
   alert('Search: ' + text + '\nFilter: ' + filter);
   CardsContainer.rows = [];
+
+  //Aggiungere nel db il campo tipo (auto o moto)
 }
 function Logout(username)
 {

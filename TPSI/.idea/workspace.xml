@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2491b068-d312-4702-a44f-4e155d1f9612" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AwesomeDB/AwesomeDB.js" beforeDir="false" afterPath="$PROJECT_DIR$/AwesomeDB/AwesomeDB.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Es01/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Es01/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -41,7 +40,7 @@
         <counts>
           <entry key="css" value="2" />
           <entry key="html" value="2" />
-          <entry key="js" value="1" />
+          <entry key="js" value="2" />
           <entry key="php" value="1" />
         </counts>
       </usages-collector>
@@ -49,22 +48,22 @@
         <counts>
           <entry key="CSS" value="2" />
           <entry key="HTML" value="2" />
-          <entry key="JavaScript" value="1" />
+          <entry key="JavaScript" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="5" />
-          <entry key="js" value="346" />
-          <entry key="txt" value="13" />
+          <entry key="js" value="503" />
+          <entry key="txt" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="5" />
-          <entry key="JavaScript" value="346" />
-          <entry key="PLAIN_TEXT" value="13" />
+          <entry key="JavaScript" value="503" />
+          <entry key="PLAIN_TEXT" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -87,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Es01/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="92" column="8" lean-forward="true" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
+            <state relative-caret-position="230">
+              <caret line="100" column="2" lean-forward="true" selection-start-line="100" selection-start-column="2" selection-end-line="100" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -146,6 +145,11 @@
             <path>
               <item name="TPSI" type="b2602c69:ProjectViewProjectNode" />
               <item name="TPSI" type="462c0819:PsiDirectoryNode" />
+              <item name="AwesomeDB" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TPSI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TPSI" type="462c0819:PsiDirectoryNode" />
               <item name="Es01" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -184,7 +188,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1534690309888</updated>
-      <workItem from="1534690312606" duration="6479000" />
+      <workItem from="1534690312606" duration="7191000" />
     </task>
     <task id="LOCAL-00001" summary="Small update">
       <created>1534691125832</created>
@@ -193,11 +197,18 @@
       <option name="project" value="LOCAL" />
       <updated>1534691125832</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update">
+      <created>1534708783907</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1534708783907</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6395000" />
+    <option name="totallyTimeSpent" value="7107000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -209,11 +220,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="768" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" x="59" y="154" width="336" height="302" id="Project" order="0" sideWeight="0.51319647" visible="true" weight="0.25" />
-      <window_info id="Structure" order="1" sideWeight="0.48680353" side_tool="true" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" x="59" y="154" width="336" height="302" id="Project" order="0" sideWeight="0.5132013" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" sideWeight="0.48679867" side_tool="true" visible="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50165015" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -265,7 +276,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Small update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small update" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Es01/css/signin.css">
@@ -295,10 +307,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AwesomeDB/AwesomeDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Es01/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="92" column="8" lean-forward="true" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
+        <state relative-caret-position="230">
+          <caret line="100" column="2" lean-forward="true" selection-start-line="100" selection-start-column="2" selection-end-line="100" selection-end-column="2" />
         </state>
       </provider>
     </entry>
