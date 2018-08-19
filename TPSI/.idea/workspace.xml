@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2491b068-d312-4702-a44f-4e155d1f9612" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Es01/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Es01/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,6 +31,7 @@
     <session id="-1136873620">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -73,30 +73,19 @@
     <favorites_list name="TPSI" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AwesomeDB/Test.html">
+        <entry file="file://$PROJECT_DIR$/Es01/php/singin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1047">
-              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-            </state>
+            <state relative-caret-position="-58" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Es01/main.js">
+        <entry file="file://$PROJECT_DIR$/Es01/php/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="100" column="2" lean-forward="true" selection-start-line="100" selection-start-column="2" selection-end-line="100" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Es01/main.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-879">
-              <caret line="32" column="22" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+            <state relative-caret-position="345">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -135,6 +124,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -145,18 +135,18 @@
             <path>
               <item name="TPSI" type="b2602c69:ProjectViewProjectNode" />
               <item name="TPSI" type="462c0819:PsiDirectoryNode" />
-              <item name="AwesomeDB" type="462c0819:PsiDirectoryNode" />
+              <item name="Es01" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TPSI" type="b2602c69:ProjectViewProjectNode" />
               <item name="TPSI" type="462c0819:PsiDirectoryNode" />
               <item name="Es01" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -188,7 +178,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1534690309888</updated>
-      <workItem from="1534690312606" duration="7191000" />
+      <workItem from="1534690312606" duration="7263000" />
     </task>
     <task id="LOCAL-00001" summary="Small update">
       <created>1534691125832</created>
@@ -204,11 +194,18 @@
       <option name="project" value="LOCAL" />
       <updated>1534708783907</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Update">
+      <created>1534709545764</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1534709545764</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7107000" />
+    <option name="totallyTimeSpent" value="7179000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -221,10 +218,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" x="59" y="154" width="336" height="302" id="Project" order="0" sideWeight="0.5132013" visible="true" weight="0.25" />
-      <window_info id="Structure" order="1" sideWeight="0.48679867" side_tool="true" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" x="59" y="154" width="336" height="302" id="Project" order="0" sideWeight="0.5445545" visible="true" weight="0.25416037" />
+      <window_info id="Structure" order="1" sideWeight="0.45544556" side_tool="true" visible="true" weight="0.25416037" />
       <window_info id="Favorites" order="2" sideWeight="0.50165015" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -319,8 +315,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Es01/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="100" column="2" lean-forward="true" selection-start-line="100" selection-start-column="2" selection-end-line="100" selection-end-column="2" />
+        <state relative-caret-position="-242">
+          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
         </state>
       </provider>
     </entry>
