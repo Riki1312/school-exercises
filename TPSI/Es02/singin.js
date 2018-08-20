@@ -14,22 +14,19 @@ var root = new Vue({
             adb.Settings.relativePhat = "Libraries/AwesomeDB/";
             adb.Conn("localhost", "root", "", "compitivacanzees1");
 
-            adb.Qu(`SELECT * FROM utenti`, (qdata) => {
+            adb.Qu(`SELECT * FROM utenti WHERE Email='${this.email}' AND Password='${this.password}' LIMIT 1`, (qdata) => {
                 console.log(qdata);
-            });
-/*
-            AJAXCall("php/singin.php?usr=" + this.email + "&pas=" + this.password, (response) => {
-                if (!response.includes("ERROR"))
+                if (qdata.length > 0)
                 {
-                    sessionStorage.setItem('email', response.split(";")[0]);
-                    sessionStorage.setItem('nome', response.split(";")[1]);
-                    sessionStorage.setItem('cognome', response.split(";")[2]);
+                    sessionStorage.setItem('email', qdata[0].Email);
+                    sessionStorage.setItem('nome', qdata[0].Nome);
+                    sessionStorage.setItem('cognome', qdata[0].Cognome);
                     sessionStorage.setItem('logged', 'true');
 
                     window.location.href = "main.html";
                 }
                 else { this.errors = true; }
-            });*/
+            });
         }
     }
 });
