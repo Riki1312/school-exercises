@@ -75,43 +75,52 @@ var CardsContainer = new Vue({
 //Functions
 window.onload = function()
 {
-  console.log("Loadpage");
+    console.log("Loadpage");
 
-  if (sessionStorage.getItem('logged') === 'true')
-    NavBar.login_username = sessionStorage.getItem('nome') + " " + sessionStorage.getItem('cognome');
-  else { window.location.href = "singin.html"; }
+    if (sessionStorage.getItem('logged') === 'true')
+        NavBar.login_username = sessionStorage.getItem('nome') + " " + sessionStorage.getItem('cognome');
+    else { window.location.href = "singin.html"; }
 
-  AJAXCall("php/main.php?veicoloid=null", (response) => {
-    if (!response.includes("ERROR"))
-    {
-        var data = JSON.parse(response);
-        console.log(data);
+    AJAXCall("php/main.php?veicoloid=null", (response) => {
+        if (!response.includes("ERROR"))
+        {
+            var data = JSON.parse(response);
+            console.log(data);
 
-        var rows = data.map((x) => { return {id: x.ID, titolo: `${x.Marca} ${x.Modello}`, desc: x.Descrizione}; });
-        for (var i = 0; i < rows.length; i += 4) { CardsContainer.rows.push(rows.splice(i, i + 4)); }
-        if (rows.length % 4 !== 0) { CardsContainer.rows.push(rows.splice(rows.length - rows.length % 4, rows.length)); }
-    }
-    else { console.log(response); }
-  });
+            var rows = data.map((x) => { return {id: x.ID, titolo: `${x.Marca} ${x.Modello}`, desc: x.Descrizione}; });
+            for (var i = 0; i < rows.length; i += 4) { CardsContainer.rows.push(rows.splice(i, i + 4)); }
+            if (rows.length % 4 !== 0) { CardsContainer.rows.push(rows.splice(rows.length - rows.length % 4, rows.length)); }
+        }
+        else { console.log(response); }
+    });
 };
 function Serch(text, filter)
 {
-  alert('Search: ' + text + '\nFilter: ' + filter);
-  CardsContainer.rows = [];
+    alert('Search: ' + text + '\nFilter: ' + filter);
+    CardsContainer.rows = [];
 
-  //Aggiungere nel db il campo tipo (auto o moto)
+    //Aggiungere nel db il campo tipo (auto o moto)
 }
 function Logout(username)
 {
-  sessionStorage.setItem('logged', 'false');
-  window.location.href = "singin.html";
+    sessionStorage.setItem('logged', 'false');
+    window.location.href = "singin.html";
 }
 function BeforeModalOpen(cardid)
 {
-  //Settare i dati per la modal (repuperarli dal server con l'ID)
-  alert('Opening modal cardid: ' + cardid);
-  CardsContainer.modalData = [];
-  CardsContainer.modalData.push("Nome: ciao", "Cognome: hello");
+    CardsContainer.modalData = [];
+    CardsContainer.modalData.push("Attendere", "Caricamento dati utente in corso ...");
+    AJAXCall("php/main.php?veicoloid=" + cardid, (response) => {
+        if (!response.includes("ERROR"))
+        {
+            var data = JSON.parse(response);
+            console.log(data);
+
+            CardsContainer.modalData = [];
+            CardsContainer.modalData.push(`Nome: ${data.Nome}`, `Cognome: ${data.Cognome}`, `Telefono: ${data.Cellulare}`, `Email: ${data.Email}`);
+        }
+        else { console.log(response); }
+    });
 }
 
 //AJAX

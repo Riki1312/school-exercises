@@ -19,17 +19,11 @@ else
 
     if($vid != null)
     {
-        $uid = db_QueryRow($db, "SELECT Utente FROM veicoli WHERE ID='$vid'");
+        $uid = db_QueryRow($db, "SELECT id FROM veicoli WHERE ID='$vid'")["id"];
         $utenteData = db_QueryRow($db, "SELECT * FROM utenti WHERE ID='$uid'");
 
-        $utenteObj->id = $veicolo['ID'];
-        $utenteObj->nome = $veicolo['Nome'];
-        $utenteObj->cognome = $veicolo['Cognome'];
-        $utenteObj->email = $veicolo['Email'];
-        $utenteObj->password = $veicolo['Password'];
-        $utenteObj->cellulare = $veicolo['Cellulare'];
-
-        echo json_encode($utenteObj);
+        sleep(3);
+        echo json_encode($utenteData);
     }
     else { echo "ERROR: Wrong data"; }
 }

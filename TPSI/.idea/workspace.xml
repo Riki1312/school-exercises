@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2491b068-d312-4702-a44f-4e155d1f9612" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Es01/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Es01/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Es01/php/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/Es01/php/main.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,7 +35,8 @@
         <counts>
           <entry key="project.closed" value="2" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.48" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -41,7 +44,7 @@
           <entry key="css" value="2" />
           <entry key="html" value="2" />
           <entry key="js" value="2" />
-          <entry key="php" value="1" />
+          <entry key="php" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -49,20 +52,23 @@
           <entry key="CSS" value="2" />
           <entry key="HTML" value="2" />
           <entry key="JavaScript" value="2" />
+          <entry key="PHP" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="5" />
-          <entry key="js" value="503" />
+          <entry key="js" value="653" />
+          <entry key="php" value="70" />
           <entry key="txt" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="5" />
-          <entry key="JavaScript" value="503" />
+          <entry key="JavaScript" value="653" />
+          <entry key="PHP" value="70" />
           <entry key="PLAIN_TEXT" value="14" />
         </counts>
       </usages-collector>
@@ -74,18 +80,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Es01/php/singin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-58" />
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Es01/php/main.php">
+        <entry file="file://$PROJECT_DIR$/Es01/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="264">
+              <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
             </state>
           </provider>
         </entry>
@@ -100,6 +99,7 @@
       <list>
         <option value="$PROJECT_DIR$/Es01/main.html" />
         <option value="$PROJECT_DIR$/Es01/main.js" />
+        <option value="$PROJECT_DIR$/Es01/php/main.php" />
       </list>
     </option>
   </component>
@@ -112,7 +112,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="29" />
     <option name="y" value="-21" />
     <option name="width" value="1382" />
@@ -136,12 +136,6 @@
               <item name="TPSI" type="b2602c69:ProjectViewProjectNode" />
               <item name="TPSI" type="462c0819:PsiDirectoryNode" />
               <item name="Es01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPSI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPSI" type="462c0819:PsiDirectoryNode" />
-              <item name="Es01" type="462c0819:PsiDirectoryNode" />
-              <item name="php" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -179,6 +173,7 @@
       <option name="presentableId" value="Default" />
       <updated>1534690309888</updated>
       <workItem from="1534690312606" duration="7263000" />
+      <workItem from="1534756927230" duration="2578000" />
     </task>
     <task id="LOCAL-00001" summary="Small update">
       <created>1534691125832</created>
@@ -205,7 +200,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7179000" />
+    <option name="totallyTimeSpent" value="8999000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -218,9 +213,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" x="59" y="154" width="336" height="302" id="Project" order="0" sideWeight="0.5445545" visible="true" weight="0.25416037" />
-      <window_info id="Structure" order="1" sideWeight="0.45544556" side_tool="true" visible="true" weight="0.25416037" />
+      <window_info active="true" content_ui="combo" x="59" y="154" width="336" height="302" id="Project" order="0" sideWeight="0.5429043" visible="true" weight="0.25372022" />
+      <window_info id="Structure" order="1" sideWeight="0.4570957" side_tool="true" visible="true" weight="0.25372022" />
       <window_info id="Favorites" order="2" sideWeight="0.50165015" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -233,9 +229,11 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32838285" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32838285" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32838285" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,11 +282,6 @@
     <entry file="file://$PROJECT_DIR$/Es01/css/main.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Es01/php/funzioni.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1672" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Es01/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-879">
@@ -307,16 +300,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Es01/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-242">
-          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+        <state relative-caret-position="264">
+          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Es01/php/singin.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Es01/php/funzioni.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Es01/php/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
         </state>
       </provider>
     </entry>
