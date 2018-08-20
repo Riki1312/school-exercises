@@ -11,7 +11,7 @@ var root = new Vue({
         SingIn: function(event)
         {
             var adb = new AwesomeDB().MySQL;
-            adb.Settings.thisRelativePhat = "Libraries/AwesomeDB/";
+            adb.Settings.relativePhat = "Libraries/AwesomeDB/";
             adb.Conn("localhost", "root", "", "compitivacanzees1");
 
             adb.Qu(`SELECT * FROM utenti`, (qdata) => {

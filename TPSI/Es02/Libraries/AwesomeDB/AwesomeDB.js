@@ -20,12 +20,15 @@ var Adb_MySQL = {
                     functionResponse(this.responseText);
                 }
             };
-            xmlhttp.open(method, Adb_MySQL.Settings.thisRelativePhat + url, async);
+            xmlhttp.open(method, Adb_MySQL.Settings.relativePhat + url, async);
             xmlhttp.send();
         }
     },
+    ///"relativePhat": Percorso di questa libreria relativo al file dove viene utilizzata
+    ///"printErrors": Se true vengono visualizzati i messaggi di errore nella console
+    ///"idStringDb": Nome del campo usato come chiave primaria nel database
     Settings: {
-        thisRelativePhat: "AwesomeDB/", printErrors: true, idStringDb: "ID"
+        relativePhat: "AwesomeDB/", printErrors: true, idStringDb: "ID"
     },
     Errors: {
         Last: "",
