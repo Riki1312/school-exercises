@@ -50,13 +50,13 @@ var SearchBar = new Vue({el: '#searchbar'});
 Vue.component('card-widget', {
     props: ["title", "desc", "itemid"],
     template:
-      '<div class="card">' +
-      '<img class="card-img-top" src="Img/download.svg" alt="Card image cap">' +
-      '<div class="card-body">' +
+      '<div class="card" style="height: 100%">' +
+      //'<img class="card-img-top" src="Img/download.svg" alt="Card image cap">' +
+      '<div class="card-body" style="height: 100%">' +
       '<h5 class="card-title">{{title}}</h5>' +
-      '<p class="card-text">{{desc}}</p>' +
-      '<a href="#" class="btn btn-secondary" v-on:click="BeforeModal" data-toggle="modal" data-target="#cardModal">Dettagli</a>' +
-      '</div></div>',
+      '<p class="card-text">{{desc}}</p></div>' +
+      '<a href="#" class="btn btn-secondary m-3" v-on:click="BeforeModal" data-toggle="modal" data-target="#cardModal">Dettagli</a>' +
+      '</div>',
     methods: {
       BeforeModal: function(event){ BeforeModalOpen(this.itemid); }
     }
@@ -81,25 +81,31 @@ window.onload = function()
         NavBar.login_username = sessionStorage.getItem('nome') + " " + sessionStorage.getItem('cognome');
     else { window.location.href = "singin.html"; }
 
-    AJAXCall("php/main.php?veicoloid=null", (response) => {
+    AJAXCall("php/main.php?", (response) => {
         if (!response.includes("ERROR"))
         {
-            var data = JSON.parse(response);
-            console.log(data);
-
-            var rows = data.map((x) => { return {id: x.ID, titolo: `${x.Marca} ${x.Modello}`, desc: x.Descrizione}; });
-            for (var i = 0; i < rows.length; i += 4) { CardsContainer.rows.push(rows.splice(i, i + 4)); }
-            if (rows.length % 4 !== 0) { CardsContainer.rows.push(rows.splice(rows.length - rows.length % 4, rows.length)); }
+            console.log(JSON.parse(response));
+            PrintHtmlData(JSON.parse(response));
         }
         else { console.log(response); }
     });
 };
 function Serch(text, filter)
 {
-    alert('Search: ' + text + '\nFilter: ' + filter);
     CardsContainer.rows = [];
+    var ajaxUrl = "php/main.php?";
+    console.log(text);
+    if (text !== "" || filter !== "Entrambi")
+        ajaxUrl += "search=" + text + "&filter=" + filter;
 
-    //Aggiungere nel db il campo tipo (auto o moto)
+    AJAXCall(ajaxUrl, (response) => {
+        if (!response.includes("ERROR"))
+        {
+            console.log(JSON.parse(response));
+            PrintHtmlData(JSON.parse(response));
+        }
+        else { console.log(response); }
+    });
 }
 function Logout(username)
 {
@@ -123,12 +129,20 @@ function BeforeModalOpen(cardid)
     });
 }
 
+function PrintHtmlData(data)
+{
+    var rows = data.map((x) => { return {id: x.ID, titolo: `${x.Marca} ${x.Modello}`, desc: x.Descrizione}; });
+    for (var i = 0; i < rows.length; i += 4)
+        CardsContainer.rows.push(rows.splice(0, 4));
+    if (rows.length % 4 !== 0) { CardsContainer.rows.push(rows.splice(0, rows.length)); }
+}
+
 //AJAX
 function AJAXCall(url, functionResponse, method = "GET", async = true)
 {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             functionResponse(this.responseText);
         }
     };
