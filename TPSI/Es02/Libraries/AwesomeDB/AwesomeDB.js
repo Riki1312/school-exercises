@@ -1,5 +1,6 @@
-///Istanziare un oggetto AwesomeDB e scegliere il tipo di database da utilizzare
+///Istanziare un oggetto AwesomeDB e scegliere il tipo di database da utilizzare.
 ///Esempio: var adb = new AwesomeDB().MySQL;
+///Settare "relativePhat" e "idStringDb" in Settings.
 function AwesomeDB()
 {
     this.MySQL = Object.create(Adb_MySQL);
@@ -24,9 +25,9 @@ var Adb_MySQL = {
             xmlhttp.send();
         }
     },
-    ///"relativePhat": Percorso di questa libreria relativo al file dove viene utilizzata
-    ///"printErrors": Se true vengono visualizzati i messaggi di errore nella console
-    ///"idStringDb": Nome del campo usato come chiave primaria nel database
+    ///"relativePhat": Percorso di questa libreria relativo al file dove viene utilizzata.
+    ///"printErrors": Se true vengono visualizzati i messaggi di errore nella console.
+    ///"idStringDb": Nome del campo usato come chiave primaria nel database.
     Settings: {
         relativePhat: "AwesomeDB/", printErrors: true, idStringDb: "ID"
     },
