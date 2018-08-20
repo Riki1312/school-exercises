@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Es01</title>
+    <title>Es02</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--Bootstrap-->
@@ -33,46 +33,30 @@
     <!-- Jumbotron -->
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">Automobili e motocicli</h1>
-            <p class="lead">Brero Riccardo. Esercitio di TPSI per i compiti delle vacanze, vendita di automobili e motocicli.</p>
+            <h1 class="display-4">Prenotazione ombrelloni</h1>
+            <p class="lead">Brero Riccardo. Esercitio di TPSI per i compiti delle vacanze, servizio di prenotazione ombrelloni.</p>
         </div>
     </div>
 
     <div class="container">
         <div class="row no-gutters" id="searchbar">
             <div class="col">
-                <search-widget></search-widget>
+                <h4>Intervallo prenotazione</h4>
+                <div class="form-group">
+                    <label>
+                        Data di inizio:
+                        <input type="date" max="3000-12-31" min="1000-01-01" class="form-control">
+                    </label>
+                </div>
+            </div>
+            <div class="col-4 ml-lg-5">
+                <h4>Informazioni</h4>
+                <p>Ogni ombrellone può essere prenotato nel periodo tra il 1 giugno e il 15 settembre, per un minimo di 7 giorni e un massimo di 107 (intera stagione).</p>
             </div>
         </div>
     </div>
     <div class="container mt-5" id="cardscontainer">
-        <h2 v-if="rows.length < 1">Nessun veicolo trovato</h2>
-        <div class="row mt-3" v-for="col in rows">
-            <div class="col-sm-3" v-for="card in col">
-                <card-widget v-bind:title="card.titolo" v-bind:desc="card.desc" v-bind:itemid="card.id"></card-widget>
-            </div>
-        </div>
-
-        <!-- Card modal -->
-        <div class="modal fade" id="cardModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">{{modalTitle}}</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                    <h3 v-if="modalData.length < 1">Caricamento ...</h3>
-                    <p v-for="item in modalData" :key="item.id">{{item}}</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-        </div>
+        <h2 class="text-center">Mappa ombrelloni:</h2>
     </div>
 
     <!-- Footer -->
