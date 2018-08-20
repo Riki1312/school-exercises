@@ -20,12 +20,12 @@ var Adb_MySQL = {
                     functionResponse(this.responseText);
                 }
             };
-            xmlhttp.open(method, url, async);
+            xmlhttp.open(method, Adb_MySQL.Settings.thisRelativePhat + url, async);
             xmlhttp.send();
         }
     },
     Settings: {
-        printErrors: true, idStringDb: "ID"
+        thisRelativePhat: "AwesomeDB/", printErrors: true, idStringDb: "ID"
     },
     Errors: {
         Last: "",
