@@ -4,7 +4,6 @@
     <list default="true" id="2491b068-d312-4702-a44f-4e155d1f9612" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Es02/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Es02/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Es02/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Es02/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -60,7 +59,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="347" />
+          <entry key="html" value="378" />
           <entry key="js" value="2249" />
           <entry key="php" value="298" />
           <entry key="txt" value="21" />
@@ -68,7 +67,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="347" />
+          <entry key="HTML" value="378" />
           <entry key="JavaScript" value="2249" />
           <entry key="PHP" value="297" />
           <entry key="PLAIN_TEXT" value="21" />
@@ -83,11 +82,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Es02/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="59" column="18" lean-forward="true" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
+            <state relative-caret-position="253">
+              <caret line="74" column="34" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -101,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Es02/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+            <state relative-caret-position="184">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -133,8 +132,8 @@
         <option value="$PROJECT_DIR$/Es02/Libraries/AwesomeDB/AwesomeDB.js" />
         <option value="$PROJECT_DIR$/Es02/singin.js" />
         <option value="$PROJECT_DIR$/Es02/singin.html" />
-        <option value="$PROJECT_DIR$/Es02/main.html" />
         <option value="$PROJECT_DIR$/Es02/main.js" />
+        <option value="$PROJECT_DIR$/Es02/main.html" />
       </list>
     </option>
   </component>
@@ -212,7 +211,7 @@
       <workItem from="1534756927230" duration="3369000" />
       <workItem from="1534787423579" duration="3766000" />
       <workItem from="1535625291921" duration="54000" />
-      <workItem from="1535625385945" duration="6158000" />
+      <workItem from="1535625385945" duration="6538000" />
     </task>
     <task id="LOCAL-00001" summary="Small update">
       <created>1534691125832</created>
@@ -270,11 +269,18 @@
       <option name="project" value="LOCAL" />
       <updated>1535625446214</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ES2 - Update">
+      <created>1535640636255</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1535640636255</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25193000" />
+    <option name="totallyTimeSpent" value="25573000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -427,17 +433,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Es02/main.html">
+    <entry file="file://$PROJECT_DIR$/Es02/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="59" column="18" lean-forward="true" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
+        <state relative-caret-position="184">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Es02/main.js">
+    <entry file="file://$PROJECT_DIR$/Es02/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+        <state relative-caret-position="253">
+          <caret line="74" column="34" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
         </state>
       </provider>
     </entry>
