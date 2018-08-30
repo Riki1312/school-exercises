@@ -1,11 +1,31 @@
 //Setup Vue objects
 var NavBar = new Vue({
-    el: '#navbar',
+    el: '#v-navbar',
     data: {
         login_username: 'username'
     },
     methods: {
         Logout: function(event){ Logout(this.login_username); }
+    }
+});
+var FormDate = new Vue({
+    el: '#v-formdate',
+    data: {
+        date_start: "",
+        date_end: "",
+        errors: false,
+        error_text: "Selezionare un minimo di 7 giorni."
+    },
+    methods: {
+        ControlError()
+        {
+            let dif = Math.floor((new Date(this.date_start) - new Date(this.date_end)) / 1000/60/60/24);
+            this.errors = -dif < 7;
+        }
+    },
+    watch: {
+        date_start: function () { this.ControlError() },
+        date_end: function () { this.ControlError() }
     }
 });
 
