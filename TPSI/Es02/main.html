@@ -39,25 +39,35 @@
     </div>
 
     <div class="container">
-        <div class="row no-gutters" id="searchbar">
+        <div class="row no-gutters">
             <div class="col">
-                <h4>Intervallo prenotazione</h4>
+                <h3 class="mb-4">Intervallo prenotazione</h3>
                 <div class="form-group">
                     <label>
                         Data di inizio:
-                        <input type="date" max="3000-12-31" min="1000-01-01" class="form-control">
+                        <input type="date" max="2018-09-15" min="2018-06-01" class="form-control">
+                    </label>
+                    <label>
+                        Data di fine:
+                        <input type="date" max="2018-09-15" min="2018-06-01" class="form-control">
                     </label>
                 </div>
+                <p class="alert-danger float-left pl-4 pr-4">Selezionare un minimo di 7 giorni.</p>
             </div>
             <div class="col-4 ml-lg-5">
-                <h4>Informazioni</h4>
+                <h3 class="mb-4">Informazioni</h3>
                 <p>Ogni ombrellone può essere prenotato nel periodo tra il 1 giugno e il 15 settembre, per un minimo di 7 giorni e un massimo di 107 (intera stagione).</p>
             </div>
         </div>
     </div>
-    <div class="container mt-5" id="cardscontainer">
-        <h2 class="text-center">Mappa ombrelloni:</h2>
+    <div class="container mt-5">
+        <h3 class="text-center">Mappa ombrelloni:</h3>
+        <canvas class="main-canvas"></canvas>
     </div>
+    <div class="container">
+        <button class="btn btn-primary float-right">Conferma prenotazione</button>
+    </div>
+    <div class="container"><h6 class="mt-2">Posto selezionato: </h6></div>
 
     <!-- Footer -->
     <footer class="bg-primary mt-5">

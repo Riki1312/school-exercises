@@ -18,10 +18,10 @@ var root = new Vue({
                 console.log(qdata);
                 if (qdata.length > 0)
                 {
-                    sessionStorage.setItem('email', qdata[0].Email);
-                    sessionStorage.setItem('nome', qdata[0].Nome);
-                    sessionStorage.setItem('cognome', qdata[0].Cognome);
-                    sessionStorage.setItem('logged', 'true');
+                    sessionStorage.setItem('ES02_email', qdata[0].Email);
+                    sessionStorage.setItem('ES02_nome', qdata[0].Nome);
+                    sessionStorage.setItem('ES02_cognome', qdata[0].Cognome);
+                    sessionStorage.setItem('ES02_logged', 'true');
 
                     window.location.href = "main.html";
                 }
