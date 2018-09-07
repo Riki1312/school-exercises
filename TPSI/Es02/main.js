@@ -35,39 +35,59 @@ var MainMap = new Vue({
     },
     methods: {
         PlaceClick: function (place) {
-            place.select = !place.select;
-            if (this.id_selected.indexOf(place.id) >= 0)
-                this.id_selected.splice(this.id_selected.indexOf(place.id), 1);
-            else
-                this.id_selected.push(place.id);
+            if (!place.reserved)
+            {
+                place.select = !place.select;
+                if (this.id_selected.indexOf(place.id) >= 0)
+                    this.id_selected.splice(this.id_selected.indexOf(place.id), 1);
+                else
+                    this.id_selected.push(place.id);
+            }
         },
-        Confirm: function (event) { ConfermaPrenotazione(this.id_selected); }
+        Confirm: function (event){ ConfermaPrenotazione(this.id_selected); }
     }
 });
 
 //Setup global vars
+var adb = new AwesomeDB().MySQL;
 
 //Functions
 window.onload = function()
 {
-    console.log("Loadpage");
-
     if (sessionStorage.getItem('ES02_logged') === 'true')
         NavBar.login_username = sessionStorage.getItem('ES02_nome') + " " + sessionStorage.getItem('ES02_cognome');
     else { window.location.href = "singin.html"; }
 
-    //Get data from DB and print map ombrelloni
+    adb.Settings.relativePhat = "Libraries/AwesomeDB/";
+    adb.Conn("localhost", "root", "", "compitivacanzees2");
     DrawnMap();
 };
 function DrawnMap()
 {
-    //var rows = data.map((x) => { return {id: x.ID, titolo: `${x.Marca} ${x.Modello}`, desc: x.Descrizione}; });
-    for (let i = 0; i < /*rows.length*/30; i += 4)
-        MainMap.rows.push(/*rows.splice(0, 4)*/ [{ id: 1, select: false }, { id: 2, select: false }, { id: 3, select: false }, { id: 4, select: false }]);
-    //if (rows.length % 4 !== 0) { CardsContainer.rows.push(rows.splice(0, rows.length)); }
+    adb.All("Ombrelloni", (data) => {
+        MainMap.rows = [];
+        let rows = data.map((x) => { return { id: x.ID, reserved: (x.Prenotato === "1") }; });
+        for (let i = 0; i < rows.length; i += 1)
+            MainMap.rows.push(rows.splice(0, 8));
+        if (rows.length % 8 !== 0) { MainMap.rows.push(rows.splice(0, rows.length)); }
+    });
 }
-function ConfermaPrenotazione() {
+function ConfermaPrenotazione(idSelected)
+{
+    console.log(idSelected);
 
+    if (idSelected.length > 0 && true /*sostituire true con il cortrollo sul input date*/)
+    {
+        //Settare message box con text di conferma
+        //aggiornare i dati db
+        DrawnMap();
+    }
+    else
+    {
+        //Settre message box text per errori di imput (anche date)
+    }
+
+    //VIsualizzare message box
 }
 function Logout(username)
 {

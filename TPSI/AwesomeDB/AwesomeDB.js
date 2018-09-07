@@ -1,3 +1,8 @@
+/*
+!!! ATTENZIONE !!!
+Questa è la versione vecchia, la nuova è in es 02.
+ */
+
 ///Istanziare un oggetto AwesomeDB e scegliere il tipo di database da utilizzare
 ///Esempio: var adb = new AwesomeDB().MySQL;
 function AwesomeDB()
