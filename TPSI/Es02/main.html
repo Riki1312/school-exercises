@@ -64,21 +64,21 @@
             </div>
         </div>
     </div>
-    <div class="container mt-5" id="v-mainmap">
-        <h3 class="text-center">Mappa ombrelloni:</h3>
-        <div class="main-map">
-            <div class="row mt-3" v-for="col in rows">
-                <div class="col-sm-3" v-for="card in col">
-                    <div>{{}}</div>
+    <div id="v-mainmap">
+        <div class="container mt-5">
+            <h3 class="text-center">Mappa ombrelloni:</h3>
+            <div class="main-map">
+                <div class="row mt-3" v-for="col in rows">
+                    <div class="col" v-for="place in col">
+                        <div class="map-place" v-on:click="PlaceClick(place)" v-bind:class="{ 'place-select': place.select }">{{place.id}}</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="v-map">
         <div class="container">
             <button class="btn btn-primary float-right">Conferma prenotazione</button>
         </div>
-        <div class="container"><h6>Posto selezionato: {{num}}</h6></div>
+        <div class="container"><h6>Posti selezionati: {{id_selected}}</h6></div>
     </div>
 
     <!-- Footer -->

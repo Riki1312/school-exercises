@@ -17,8 +17,7 @@ var FormDate = new Vue({
         error_text: "Selezionare un minimo di 7 giorni."
     },
     methods: {
-        ControlError()  //Ma che caz..!
-        {
+        ControlError: function(event) {
             let dif = Math.floor((new Date(this.date_start) - new Date(this.date_end)) / 1000/60/60/24);
             this.errors = -dif < 7;
         }
@@ -31,12 +30,18 @@ var FormDate = new Vue({
 var MainMap = new Vue({
     el: "#v-mainmap",
     data: {
-        rows: []
+        rows: [],
+        id_selected: []
     },
     methods: {
-        PlaceClick: function (id, event) {
-
-        }
+        PlaceClick: function (place) {
+            place.select = !place.select;
+            if (this.id_selected.indexOf(place.id) >= 0)
+                this.id_selected.splice(this.id_selected.indexOf(place.id), 1);
+            else
+                this.id_selected.push(place.id);
+        },
+        Confirm: function (event) { ConfermaPrenotazione(this.id_selected); }
     }
 });
 
@@ -52,10 +57,16 @@ window.onload = function()
     else { window.location.href = "singin.html"; }
 
     //Get data from DB and print map ombrelloni
-    DrawnCanvas();
+    DrawnMap();
 };
-function DrawnCanvas()
+function DrawnMap()
 {
+    //var rows = data.map((x) => { return {id: x.ID, titolo: `${x.Marca} ${x.Modello}`, desc: x.Descrizione}; });
+    for (let i = 0; i < /*rows.length*/30; i += 4)
+        MainMap.rows.push(/*rows.splice(0, 4)*/ [{ id: 1, select: false }, { id: 2, select: false }, { id: 3, select: false }, { id: 4, select: false }]);
+    //if (rows.length % 4 !== 0) { CardsContainer.rows.push(rows.splice(0, rows.length)); }
+}
+function ConfermaPrenotazione() {
 
 }
 function Logout(username)
