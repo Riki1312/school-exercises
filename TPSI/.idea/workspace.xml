@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2491b068-d312-4702-a44f-4e155d1f9612" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Es02/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Es02/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Es02/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Es02/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Es02/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Es02/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,43 +35,48 @@
     <session id="-1136873620">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.48" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.64" value="1" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="2" />
-          <entry key="html" value="9" />
-          <entry key="js" value="9" />
+          <entry key="css" value="4" />
+          <entry key="html" value="11" />
+          <entry key="js" value="12" />
           <entry key="php" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="2" />
-          <entry key="HTML" value="9" />
-          <entry key="JavaScript" value="9" />
+          <entry key="CSS" value="4" />
+          <entry key="HTML" value="11" />
+          <entry key="JavaScript" value="12" />
           <entry key="PHP" value="2" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="378" />
-          <entry key="js" value="2249" />
+          <entry key="css" value="31" />
+          <entry key="html" value="427" />
+          <entry key="js" value="2588" />
           <entry key="php" value="298" />
           <entry key="txt" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="378" />
-          <entry key="JavaScript" value="2249" />
+          <entry key="CSS" value="31" />
+          <entry key="HTML" value="427" />
+          <entry key="JavaScript" value="2588" />
           <entry key="PHP" value="297" />
           <entry key="PLAIN_TEXT" value="21" />
           <entry key="SQL" value="1" />
@@ -82,38 +90,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Es02/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="74" column="34" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
+            <state relative-caret-position="273">
+              <caret line="72" column="22" lean-forward="true" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Es02/singin.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Es02/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="230">
+              <caret line="37" column="12" lean-forward="true" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Es02/singin.js">
+        <entry file="file://$PROJECT_DIR$/Es02/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-69">
-              <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+            <state relative-caret-position="138">
+              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Es01/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="618">
+              <caret line="53" column="14" lean-forward="true" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Es01/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1610">
+              <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -132,8 +149,9 @@
         <option value="$PROJECT_DIR$/Es02/Libraries/AwesomeDB/AwesomeDB.js" />
         <option value="$PROJECT_DIR$/Es02/singin.js" />
         <option value="$PROJECT_DIR$/Es02/singin.html" />
-        <option value="$PROJECT_DIR$/Es02/main.js" />
+        <option value="$PROJECT_DIR$/Es02/css/main.css" />
         <option value="$PROJECT_DIR$/Es02/main.html" />
+        <option value="$PROJECT_DIR$/Es02/main.js" />
       </list>
     </option>
   </component>
@@ -158,6 +176,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,13 +187,23 @@
             <path>
               <item name="TPSI" type="b2602c69:ProjectViewProjectNode" />
               <item name="TPSI" type="462c0819:PsiDirectoryNode" />
+              <item name="Es01" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TPSI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TPSI" type="462c0819:PsiDirectoryNode" />
               <item name="Es02" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TPSI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TPSI" type="462c0819:PsiDirectoryNode" />
+              <item name="Es02" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -211,7 +240,11 @@
       <workItem from="1534756927230" duration="3369000" />
       <workItem from="1534787423579" duration="3766000" />
       <workItem from="1535625291921" duration="54000" />
-      <workItem from="1535625385945" duration="6538000" />
+      <workItem from="1535625385945" duration="6581000" />
+      <workItem from="1535646406687" duration="6754000" />
+      <workItem from="1536315071747" duration="2000" />
+      <workItem from="1536316645921" duration="25000" />
+      <workItem from="1536316703683" duration="1002000" />
     </task>
     <task id="LOCAL-00001" summary="Small update">
       <created>1534691125832</created>
@@ -276,11 +309,18 @@
       <option name="project" value="LOCAL" />
       <updated>1535640636255</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ES2 - Update">
+      <created>1535640970283</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1535640970283</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25573000" />
+    <option name="totallyTimeSpent" value="33399000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -295,8 +335,8 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" x="59" y="154" width="336" height="302" id="Project" order="0" sideWeight="0.5379538" visible="true" weight="0.24925596" />
-      <window_info id="Structure" order="1" sideWeight="0.4620462" side_tool="true" visible="true" weight="0.24925596" />
+      <window_info active="true" content_ui="combo" x="59" y="154" width="336" height="302" id="Project" order="0" sideWeight="0.5313531" visible="true" weight="0.24925596" />
+      <window_info id="Structure" order="1" sideWeight="0.46864685" side_tool="true" visible="true" weight="0.24925596" />
       <window_info id="Favorites" order="2" sideWeight="0.50165015" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -363,13 +403,6 @@
     <entry file="file://$PROJECT_DIR$/Es01/css/main.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Es01/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AwesomeDB/AwesomeDB.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -388,13 +421,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Es01/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="125" column="42" lean-forward="true" selection-start-line="125" selection-start-column="42" selection-end-line="125" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -419,31 +445,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Es02/singin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69">
-          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Es02/singin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
+        <state relative-caret-position="-72">
           <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Es02/main.js">
+    <entry file="file://$PROJECT_DIR$/Es02/singin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="138">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Es02/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="74" column="34" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
+        <state relative-caret-position="273">
+          <caret line="72" column="22" lean-forward="true" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Es01/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1610">
+          <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Es01/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="53" column="14" lean-forward="true" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Es02/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Es02/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="37" column="12" lean-forward="true" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
         </state>
       </provider>
     </entry>

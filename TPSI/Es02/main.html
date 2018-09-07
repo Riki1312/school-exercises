@@ -64,9 +64,15 @@
             </div>
         </div>
     </div>
-    <div class="container mt-5">
+    <div class="container mt-5" id="v-mainmap">
         <h3 class="text-center">Mappa ombrelloni:</h3>
-        <canvas class="main-canvas"></canvas>
+        <div class="main-map">
+            <div class="row mt-3" v-for="col in rows">
+                <div class="col-sm-3" v-for="card in col">
+                    <div>{{}}</div>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="v-map">
         <div class="container">

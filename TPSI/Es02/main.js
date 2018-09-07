@@ -17,7 +17,7 @@ var FormDate = new Vue({
         error_text: "Selezionare un minimo di 7 giorni."
     },
     methods: {
-        ControlError()
+        ControlError()  //Ma che caz..!
         {
             let dif = Math.floor((new Date(this.date_start) - new Date(this.date_end)) / 1000/60/60/24);
             this.errors = -dif < 7;
@@ -26,6 +26,17 @@ var FormDate = new Vue({
     watch: {
         date_start: function () { this.ControlError() },
         date_end: function () { this.ControlError() }
+    }
+});
+var MainMap = new Vue({
+    el: "#v-mainmap",
+    data: {
+        rows: []
+    },
+    methods: {
+        PlaceClick: function (id, event) {
+
+        }
     }
 });
 
@@ -41,7 +52,12 @@ window.onload = function()
     else { window.location.href = "singin.html"; }
 
     //Get data from DB and print map ombrelloni
+    DrawnCanvas();
 };
+function DrawnCanvas()
+{
+
+}
 function Logout(username)
 {
     sessionStorage.setItem('ES02_logged', 'false');

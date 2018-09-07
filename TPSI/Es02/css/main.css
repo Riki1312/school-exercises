@@ -1,5 +1,7 @@
-.main-canvas {
+.main-map {
     width: 100%;
     margin-top: 1.2rem;
     margin-bottom: 1.2rem;
+    border: 5px solid #E9ECEF;
+    border-radius: 10px;
 }
