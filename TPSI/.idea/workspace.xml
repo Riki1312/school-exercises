@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2491b068-d312-4702-a44f-4e155d1f9612" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Es02/css/page2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Es02/css/page3-4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Es02/css/page5.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -34,7 +31,7 @@
     <session id="-1136873620">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.19" value="1" />
@@ -69,7 +66,7 @@
           <entry key="html" value="568" />
           <entry key="js" value="3495" />
           <entry key="php" value="298" />
-          <entry key="txt" value="21" />
+          <entry key="txt" value="68" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -78,7 +75,7 @@
           <entry key="HTML" value="568" />
           <entry key="JavaScript" value="3495" />
           <entry key="PHP" value="297" />
-          <entry key="PLAIN_TEXT" value="21" />
+          <entry key="PLAIN_TEXT" value="68" />
           <entry key="SQL" value="1" />
         </counts>
       </usages-collector>
@@ -323,7 +320,7 @@
       <workItem from="1536315071747" duration="2000" />
       <workItem from="1536316645921" duration="25000" />
       <workItem from="1536316703683" duration="11987000" />
-      <workItem from="1536433240812" duration="1784000" />
+      <workItem from="1536433240812" duration="1866000" />
     </task>
     <task id="LOCAL-00001" summary="Small update">
       <created>1534691125832</created>
@@ -416,11 +413,18 @@
       <option name="project" value="LOCAL" />
       <updated>1536347437761</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="ES2 - Update&#10;Aggiunta bozza pagine secondarie (tutte e 5)">
+      <created>1536436872141</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1536436872141</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46168000" />
+    <option name="totallyTimeSpent" value="46250000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -433,7 +437,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" x="59" y="154" width="336" height="302" id="Project" order="0" sideWeight="0.52970296" visible="true" weight="0.24925596" />
       <window_info id="Structure" order="1" sideWeight="0.47029704" side_tool="true" visible="true" weight="0.24925596" />
@@ -492,7 +495,8 @@
     <MESSAGE value="Small update" />
     <MESSAGE value="Update" />
     <MESSAGE value="ES2 - Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="ES2 - Update" />
+    <MESSAGE value="ES2 - Update&#10;Aggiunta bozza pagine secondarie (tutte e 5)" />
+    <option name="LAST_COMMIT_MESSAGE" value="ES2 - Update&#10;Aggiunta bozza pagine secondarie (tutte e 5)" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Es01/css/signin.css">
