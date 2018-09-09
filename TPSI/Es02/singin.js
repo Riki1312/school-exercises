@@ -12,7 +12,7 @@ var root = new Vue({
         {
             var adb = new AwesomeDB().MySQL;
             adb.Settings.relativePhat = "Libraries/AwesomeDB/";
-            adb.Conn("localhost", "root", "", "compitivacanzees1");
+            adb.Conn("localhost", "root", "", "compitivacanzees2");
 
             adb.Qu(`SELECT * FROM utenti WHERE Email='${this.email}' AND Password='${this.password}' LIMIT 1`, (qdata) => {
                 console.log(qdata);
