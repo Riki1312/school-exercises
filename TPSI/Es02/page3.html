@@ -1,49 +1,37 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"/>
+    <title>Es02</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Carousel Template for Bootstrap</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="Bootstrap/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
+    <!--Css-->
     <link href="css/page3-4.css" rel="stylesheet">
 </head>
 <body>
-
-<header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Carousel</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="v-navbar">
+        <a class="navbar-brand" href="#">Es01</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
+                <li class="nav-item active"><a class="nav-link" href="#">Page2</a></li>
+                <li class="nav-item active"><a class="nav-link" href="#">Page3</a></li>
+                <li class="nav-item active"><a class="nav-link" href="#">Page4</a></li>
+                <li class="nav-item active"><a class="nav-link" href="#">Page5</a></li>
             </ul>
-            <form class="form-inline mt-2 mt-md-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            <div class="form-inline my-2 my-lg-0">
+                <span class="text-light">Signed in as:</span><a class="nav-link text-light font-weight-bold" href="#">{{login_username}}</a>
+                <button class="btn btn-outline-light my-2 my-sm-0" v-on:click="Logout">Logout</button>
+            </div>
         </div>
     </nav>
-</header>
-
-<main role="main">
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -93,14 +81,7 @@
         </a>
     </div>
 
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
     <div class="container marketing">
-
-        <!-- Three columns of text below the carousel -->
         <div class="row">
             <div class="col-lg-4">
                 <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
@@ -121,25 +102,21 @@
                 <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
-
     </div><!-- /.container -->
 
-
-    <!-- FOOTER -->
-    <footer class="container">
-        <p class="float-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    <!-- Footer -->
+    <footer class="bg-primary mt-5">
+        <div class="text-light text-center py-3">&copy; 2018 Copyright: <a class="text-light font-weight-bold" href="#"> Riccardo Brero</a></div>
     </footer>
-</main>
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="../../assets/js/vendor/popper.min.js"></script>
-<script src="../../dist/js/bootstrap.min.js"></script>
-<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-<script src="../../assets/js/vendor/holder.min.js"></script>
+    <!--Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+
+    <!--Js-->
+    <script src="Libraries/Vue/vue.js"></script>
+    <script src="Libraries/AwesomeDB/AwesomeDB.js"></script>
+    <script src=""></script>
 </body>
 </html>
