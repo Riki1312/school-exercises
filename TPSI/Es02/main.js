@@ -31,7 +31,8 @@ var MainMap = new Vue({
     el: "#v-mainmap",
     data: {
         rows: [],
-        id_selected: []
+        id_selected: [],
+        modal_text: ""
     },
     methods: {
         PlaceClick: function (place) {
@@ -44,7 +45,15 @@ var MainMap = new Vue({
                     this.id_selected.push(place.id);
             }
         },
-        Confirm: function (event){ ConfermaPrenotazione(this.id_selected); }
+        Confirm: function (event) {
+            if (this.id_selected.length > 0 && !FormDate.errors && (FormDate.date_start !== FormDate.date_end))
+            {
+                this.modal_text = "Prenotazione effettuata con successo.";
+                ConfermaPrenotazione(this.id_selected);
+            }
+            else
+                this.modal_text = "Errore selezionare un intervallo di date e un posto corretti.";
+        }
     }
 });
 
@@ -64,6 +73,7 @@ window.onload = function()
 };
 function DrawnMap()
 {
+    MainMap.id_selected = [];
     adb.All("Ombrelloni", (data) => {
         MainMap.rows = [];
         let rows = data.map((x) => { return { id: x.ID, reserved: (x.Prenotato === "1") }; });
@@ -76,18 +86,14 @@ function ConfermaPrenotazione(idSelected)
 {
     console.log(idSelected);
 
-    if (idSelected.length > 0 && true /*sostituire true con il cortrollo sul input date*/)
-    {
-        //Settare message box con text di conferma
-        //aggiornare i dati db
-        DrawnMap();
-    }
-    else
-    {
-        //Settre message box text per errori di imput (anche date)
-    }
-
-    //VIsualizzare message box
+    idSelected.forEach((id) => {
+        adb.Upd("Ombrelloni", id, { Prenotato: 1 }, (res) =>
+        {
+            console.log("update result: ");
+            console.log(res);
+            DrawnMap();
+        });
+    });
 }
 function Logout(username)
 {

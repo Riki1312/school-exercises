@@ -22,10 +22,10 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item active"><a class="nav-link" href="#">Page2</a></li>
-                <li class="nav-item active"><a class="nav-link" href="#">Page3</a></li>
-                <li class="nav-item active"><a class="nav-link" href="#">Page4</a></li>
-                <li class="nav-item active"><a class="nav-link" href="#">Page5</a></li>
+                <li class="nav-item active"><a class="nav-link" href="page2.html">Page2</a></li>
+                <li class="nav-item active"><a class="nav-link" href="page3.html">Page3</a></li>
+                <li class="nav-item active"><a class="nav-link" href="page4.html">Page4</a></li>
+                <li class="nav-item active"><a class="nav-link" href="page5.html">Page5</a></li>
             </ul>
             <div class="form-inline my-2 my-lg-0">
                 <span class="text-light">Signed in as:</span><a class="nav-link text-light font-weight-bold" href="#">{{login_username}}</a>
@@ -76,9 +76,27 @@
             </div>
         </div>
         <div class="container">
-            <button class="btn btn-primary float-right" v-on:click="Confirm()">Conferma prenotazione</button>
+            <button class="btn btn-primary float-right" v-on:click="Confirm()" data-toggle="modal" data-target="#cardModal">Conferma prenotazione</button>
         </div>
         <div class="container"><h6>Posti selezionati: {{id_selected}}</h6></div>
+
+        <!-- Confirm modal -->
+        <div class="modal fade" id="cardModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Conferma prenotazione</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body"><p>{{modal_text}}</p></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->

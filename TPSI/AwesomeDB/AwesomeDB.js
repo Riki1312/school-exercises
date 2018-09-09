@@ -89,6 +89,8 @@ var Adb_MySQL = {
     {
         let ret = [];
 
+        if (!Array.isArray(idArray)) { idArray = [idArray]; }
+
         idArray.forEach((id, index) =>
         {
             ret.push(-1);
@@ -150,6 +152,8 @@ var Adb_MySQL = {
     Ins: function(table, recordArrayObj, f_response)
     {
         let ret = [];
+
+        if (!Array.isArray(recordArrayObj)) { recordArrayObj = [recordArrayObj]; }
 
         recordArrayObj.forEach((recordObj, index) =>
         {
