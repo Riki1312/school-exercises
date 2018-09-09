@@ -116,30 +116,60 @@ var Adb_MySQL = {
         return this;
     },
 
-    ///Aggiorna un record dati dabella e id di esso
+    ///Aggiorna uno o più record secondo queste modalità:
+    ///- id non array e recordObj non array: modifica il singolo record come specificato.
+    ///- id array e recordObj non array: modifica tutti i record (del array di id) con lo stesso valore specificato.
+    ///- id array e recordObj array: modifica tutti i record (del array di id) con tutti i dati specificati (del array di recordObj)
+    ///  (Attenzione: le lunghezze dei due array devono essere uguali).
     ///I nuovi dati sono da passare come ogetto
     ///(l'oggetto deve avere i nomi delle proprietà coerenti con quelle sul database).
-    Upd: function(table, id, recordObj, f_response)
+    Upd: function(table, idArray, recordArrayObj, f_response)
     {
-        let ret = -1;
-        let recordNames = Object.getOwnPropertyNames(recordObj);
-        let newValues = Object.values(recordObj);
+        let ret = [];
 
-        this.Methods.ajaxCall(`AwesomeDB_MySQL.php?f_Upd=true` +
-            `&p_settings=${JSON.stringify(this.Settings)}` +
-            `&p_host=${this.Data.host}` +
-            `&p_user=${this.Data.user}` +
-            `&p_password=${this.Data.password}` +
-            `&p_dbname=${this.Data.dbname}` +
-            `&p_table=${table}` +
-            `&p_id=${id}` +
-            `&p_recordNames=${JSON.stringify(recordNames)}` +
-            `&p_newValues=${JSON.stringify(newValues)}`
-        , (response) =>
+        if (!Array.isArray(idArray))
         {
-            try { ret = JSON.parse(response); }
-            catch { ret = -1; this.Errors.Add(response); }
-            f_response(ret);
+            idArray = [idArray];
+            recordArrayObj = [recordArrayObj];
+        }
+        else if (!Array.isArray(recordArrayObj))
+        {
+            let _recordArrayObj = []
+            for (let i = 0; i < idArray.length; i++)
+                _recordArrayObj.push(recordArrayObj);
+            recordArrayObj = _recordArrayObj;
+        }
+        else if (idArray.length !== recordArrayObj.length)
+        {
+            this.Errors.Add("Error Upd: idArray.length !== recordArrayObj.length");
+            f_response(false);
+            return this;
+        }
+
+        idArray.forEach((id, index) =>
+        {
+            ret.push(-1);
+            let recordNames = Object.getOwnPropertyNames(recordArrayObj[index]);
+            let newValues = Object.values(recordArrayObj[index]);
+
+            this.Methods.ajaxCall(`AwesomeDB_MySQL.php?f_Upd=true` +
+                `&p_settings=${JSON.stringify(this.Settings)}` +
+                `&p_host=${this.Data.host}` +
+                `&p_user=${this.Data.user}` +
+                `&p_password=${this.Data.password}` +
+                `&p_dbname=${this.Data.dbname}` +
+                `&p_table=${table}` +
+                `&p_id=${id}` +
+                `&p_recordNames=${JSON.stringify(recordNames)}` +
+                `&p_newValues=${JSON.stringify(newValues)}`
+            , (response) =>
+            {
+                try { ret[index] = JSON.parse(response); }
+                catch { ret[index] = -1; this.Errors.Add(response); }
+
+                if (index === idArray.length - 1)
+                    f_response(ret);
+            });
         });
 
         return this;
