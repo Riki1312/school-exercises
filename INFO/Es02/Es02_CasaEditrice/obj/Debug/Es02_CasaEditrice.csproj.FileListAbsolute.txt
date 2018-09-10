@@ -1,0 +1,13 @@
+C:\laragon\www\GitHub\CompitiScuola\INFO\Es02\Es02_CasaEditrice\bin\Debug\DBCasaEditrice.mdf
+C:\laragon\www\GitHub\CompitiScuola\INFO\Es02\Es02_CasaEditrice\bin\Debug\DBCasaEditrice_log.ldf
+C:\laragon\www\GitHub\CompitiScuola\INFO\Es02\Es02_CasaEditrice\bin\Debug\Es02_CasaEditrice.exe.config
+C:\laragon\www\GitHub\CompitiScuola\INFO\Es02\Es02_CasaEditrice\bin\Debug\Es02_CasaEditrice.exe
+C:\laragon\www\GitHub\CompitiScuola\INFO\Es02\Es02_CasaEditrice\bin\Debug\Es02_CasaEditrice.pdb
+C:\laragon\www\GitHub\CompitiScuola\INFO\Es02\Es02_CasaEditrice\obj\Debug\Es02_CasaEditrice.FromMain.resources
+C:\laragon\www\GitHub\CompitiScuola\INFO\Es02\Es02_CasaEditrice\obj\Debug\Es02_CasaEditrice.Properties.Resources.resources
+C:\laragon\www\GitHub\CompitiScuola\INFO\Es02\Es02_CasaEditrice\obj\Debug\Es02_CasaEditrice.csproj.GenerateResource.Cache
+C:\laragon\www\GitHub\CompitiScuola\INFO\Es02\Es02_CasaEditrice\obj\Debug\Es02_CasaEditrice.csproj.CoreCompileInputs.cache
+C:\laragon\www\GitHub\CompitiScuola\INFO\Es02\Es02_CasaEditrice\obj\Debug\Es02_CasaEditrice.exe
+C:\laragon\www\GitHub\CompitiScuola\INFO\Es02\Es02_CasaEditrice\obj\Debug\Es02_CasaEditrice.pdb
+C:\laragon\www\GitHub\CompitiScuola\INFO\Es02\Es02_CasaEditrice\obj\Debug\Es02_CasaEditrice.csprojResolveAssemblyReference.cache
+C:\laragon\www\GitHub\CompitiScuola\INFO\Es02\Es02_CasaEditrice\obj\Debug\Es02_CasaEditrice.FormDataView.resources
