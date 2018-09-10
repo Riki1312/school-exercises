@@ -1,0 +1,11 @@
+C:\Users\Costa\Desktop\Compiti estivi\Informatica\Esercizio-2\Esercizio-2\Esercizio-2\bin\Debug\Esercizio-2.exe.config
+C:\Users\Costa\Desktop\Compiti estivi\Informatica\Esercizio-2\Esercizio-2\Esercizio-2\bin\Debug\Esercizio-2.exe
+C:\Users\Costa\Desktop\Compiti estivi\Informatica\Esercizio-2\Esercizio-2\Esercizio-2\bin\Debug\Esercizio-2.pdb
+C:\Users\Costa\Desktop\Compiti estivi\Informatica\Esercizio-2\Esercizio-2\Esercizio-2\obj\Debug\Esercizio-2.csprojAssemblyReference.cache
+C:\Users\Costa\Desktop\Compiti estivi\Informatica\Esercizio-2\Esercizio-2\Esercizio-2\obj\Debug\Esercizio_2.Form1.resources
+C:\Users\Costa\Desktop\Compiti estivi\Informatica\Esercizio-2\Esercizio-2\Esercizio-2\obj\Debug\Esercizio_2.Properties.Resources.resources
+C:\Users\Costa\Desktop\Compiti estivi\Informatica\Esercizio-2\Esercizio-2\Esercizio-2\obj\Debug\Esercizio-2.csproj.GenerateResource.cache
+C:\Users\Costa\Desktop\Compiti estivi\Informatica\Esercizio-2\Esercizio-2\Esercizio-2\obj\Debug\Esercizio-2.csproj.CoreCompileInputs.cache
+C:\Users\Costa\Desktop\Compiti estivi\Informatica\Esercizio-2\Esercizio-2\Esercizio-2\obj\Debug\Esercizio-2.exe
+C:\Users\Costa\Desktop\Compiti estivi\Informatica\Esercizio-2\Esercizio-2\Esercizio-2\obj\Debug\Esercizio-2.pdb
+C:\Users\Costa\Desktop\Compiti estivi\Informatica\Esercizio-2\Esercizio-2\Esercizio-2\obj\Debug\Esercizio_2.frmDv.resources
