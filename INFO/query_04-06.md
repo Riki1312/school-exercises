@@ -70,3 +70,14 @@ c.IdCategoria = a.IdCategoria
 GROUP BY cl.Nome
 
 6)
+SELECT IdFattura
+FROM Fatture
+WHERE Pagata = false
+
+7)
+SELECT IdFattura
+FROM Fatture
+WHERE Pagata = false AND Data <= DATEADD(DAY, -30, GETDATE())
+
+8)
+SELECT
