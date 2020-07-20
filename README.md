@@ -1,1 +1,1 @@
-# CompitiScuola
+# School exercises
